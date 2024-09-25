@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="./css/elegant-icons.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" /> -->
+	<!-- <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" /> -->
+	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" /> -->
+	<!-- <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" /> -->
+	
+	<title>User Form</title>
+	<link rel="stylesheet" href="./css/frmUser.css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+</head>
+
+<body>
+	<!-- Offcanvas Menu Begin -->
+	<div class="offcanvas-menu-overlay"></div>
+	<div class="offcanvas-menu-wrapper">
+		<div class="offcanvas__close">+</div>
+		<ul class="offcanvas__widget">
+			
+			<li onsubmit="return false"><a onclick="window.location='./shopCart.html'">
+				<span class="icon_bag_alt"></span>
+				<div class="tip" id="Th_Gio_hangmini">0</div>
+			</a></li>
+		</ul>
+		<div class="offcanvas__logo">
+			<a href="../index.html"><img src="../img/logo_ZAMAZON.png" alt="" /></a>
+		</div>
+		<div id="mobile-menu-wrap"></div>
+		<div class="offcanvas__auth">
+			
+		</div>
+	</div>
+	<!-- Offcanvas Menu End -->
+	<!-- Header Section Begin -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-3 col-lg-2">
+					<div class="header__logo">
+						<a href="../index.html"><img src="../img/logo_ZAMAZON.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-7">
+					<nav class="header__menu">
+						<ul>
+							<li class="active"><a href="../index.html">Home</a></li>
+							<li><a href="../shop.html">Shop</a>
+								<ul class="dropdown">
+                                    <li><a href="../womenFashion/">Women Fashion</a></li>
+                                    <li><a href="../menFashion/">Men Fashion</a></li>
+                                    <li><a href="../kidToy/">Kids Toy</a></li>
+                                    <li><a href="../watch/">Watch</a></li>
+                                    <li><a href="../cosmetics/">Cosmetic</a></li>
+                                    <li><a href="../menShoe/">Men Shoes</a></li>
+                                    <li><a href="../womenShoe/">Women Shoes</a></li>
+                                    <li><a href="../houseware/">Houseware</a></li>
+                                    <li><a href="../phone/">Phone</a></li>
+                                    <li><a href="../tivi/">Tivi</a></li>
+                                </ul>
+							</li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-lg-3">
+					<div class="header__right">
+						<div class="header__right__auth">
+							<a href="./index.html">Login User</a>
+                            <a href="../seller/">Login Seller</a>
+						</div>
+						<ul class="header__right__widget">
+							
+							
+							<li onsubmit="return false"><a href="#" onclick="window.location='../shopCart.html'">
+								<span class="icon_bag_alt"></span>
+								<div class="tip" id="Th_Gio_hang">0</div>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="canvas__open">
+				<i class="fa fa-bars"></i>
+			</div>
+		</div>
+	</header>
+	<!-- Header Section End -->
+	<!-- Start form login and sign up -->
+	<div class="container-form">
+		<div class="text-left">
+			<nav>
+				<h2>Log in account</h2>
+				<p>“Discover new trends, find shopping fun at Zamazon!”</p>
+				<p class="arrow">log in now →</p>
+			</nav>
+			<nav>
+				<h2>Register for an account</h2>
+				<p>“Start registering Amazon now!”</p>
+				<p class="arrow">Register now →</p>
+			</nav>
+		</div>
+		<div class="form-right">
+			<div>
+				<h3>LOGIN</h3>
+				<form id="login-form" action="">
+					<input id="login-username" type="text" name="username" placeholder="username"
+						autocomplete="" />
+					<input id="login-password" type="password" name="password" placeholder="password" autocomplete="" />
+				</form>
+				<button id="login" onclick="dang_nhap()">Log in</button>
+				<button id="or-sign-up">Do not have an account?</button>
+			</div>
+			<div>
+				<h3>SIGN UP</h3>
+				<form id="sign-up-form" action="">
+					<input id="sign-up-fullname" style="margin-bottom: 10px;" type="text" name="fullname" placeholder="your fullname"
+						autocomplete="" />
+					<input id="sign-up-username" style="margin-bottom: 10px;" type="text" name="username" placeholder="username"
+						autocomplete="" />
+					<input id="sign-up-password" style="margin-bottom: 10px;" type="password" name="password" placeholder="password"
+						autocomplete="" />
+					<input id="sign-up-repassword" style="margin-bottom: 10px;" type="password" name="repassword" placeholder="confirm password"
+						autocomplete="" />
+				</form>
+				<button id="sign-up" onclick="dang_ky()">Register</button>
+				<button id="back-login">Back to login</button>
+			</div>
+		</div>
+	</div>
+	<!-- End form login and sign up -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.magnific-popup.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/mixitup.min.js"></script>
+	<script src="./js/jquery.countdown.min.js"></script>
+	<script src="./js/jquery.slicknav.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/jquery.nicescroll.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		text_left = document.querySelector(".text-left");
+		form_right = document.querySelector(".form-right");
+		allNestedChildren = [];
+		allchild_form = [];
+		btn_or_sign_up = document.querySelector("#or-sign-up");
+		btn_back_login = document.querySelector("#back-login");
+		// lấy các child trong text-left và right-form
+		for (let parent of text_left.children) {
+			for (let child of parent.children) {
+				allNestedChildren.push(child);
+			}
+		}
+		for (let parent of form_right.children) {
+			Array.from(parent.children).forEach((child_c1, index) => {
+				if (index == 1) {
+					for (child of child_c1.children) {
+						allchild_form.push(child);
+					}
+				} else {
+					allchild_form.push(child_c1);
+				}
+			});
+		}
+		// click chuyển qua đăng kí
+		btn_or_sign_up.addEventListener("click", () => {
+			btn_back_login.disabled = true;
+			setTimeout(() => {
+				btn_back_login.disabled = false;
+			}, 1500);
+
+			t1 = 0;
+			Array.from(allNestedChildren).forEach((element) => {
+				setTimeout(() => {
+					element.style.transform = "translateY(-300px)";
+				}, t1);
+				t1 += 50;
+			});
+			t2 = 0;
+			Array.from(allchild_form).forEach((item) => {
+				setTimeout(() => {
+					item.style.transform = "TranslateY(-370px)";
+				}, t2);
+				t2 += 50;
+			});
+		});
+		// click chuyển qua login
+		btn_back_login.addEventListener("click", () => {
+			btn_or_sign_up.disabled = true;
+			setTimeout(() => {
+				btn_or_sign_up.disabled = false;
+			}, 1500);
+			t1 = 0;
+			Array.from(allNestedChildren)
+				.reverse()
+				.forEach((element) => {
+					setTimeout(() => {
+						element.style.transform = "translateY(0)";
+					}, t1);
+					t1 += 50;
+				});
+			t2 = 0;
+			Array.from(allchild_form)
+				.reverse()
+				.forEach((item) => {
+					setTimeout(() => {
+						item.style.transform = "TranslateY(0)";
+					}, t2);
+					t2 += 50;
+				});
+		});
+	</script>
+	<script src="./js/api.js"></script>
+	<script src="./js/signUp_Login.js"></script>
+	<script >
+		if (sessionStorage.getItem("carts") != undefined) {
+            carts = JSON.parse(sessionStorage.getItem("carts"))
+        }
+        let Th_Gio_hang = document.getElementById("Th_Gio_hang");
+        let Th_Gio_hangmini = document.getElementById("Th_Gio_hangmini");
+        Th_Gio_hang.innerHTML = `${carts.length}`;
+        Th_Gio_hangmini.innerHTML = `${carts.length}`;
+	</script>
+</body>
+
+</html>
