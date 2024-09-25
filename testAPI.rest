@@ -1,0 +1,8 @@
+###
+GET http://localhost:8080/dsDienthoai
+
+####
+GET http://localhost:8080/dsDoGiaDung
+
+###
+POST http://localhost:8080/user/Dangky
