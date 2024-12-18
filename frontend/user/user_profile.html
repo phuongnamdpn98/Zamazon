@@ -1,0 +1,222 @@
+<script>
+	if (sessionStorage.getItem("USER") == undefined) {
+		window.location = `.`
+	} else {
+		var user = JSON.parse(sessionStorage.getItem("USER"));
+
+	}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/user_profile.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="./css/elegant-icons.css" type="text/css" />
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+	<title>User Profile</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-3 col-lg-2">
+					<div class="header__logo">
+						<a href="./index_main.html"><img src="../img/logo_ZAMAZON.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-7">
+					<nav class="header__menu">
+						<ul>
+							<li class="active"><a href="./index_main.html">Home</a></li>
+							<li><a href="./shop.html">Shop</a>
+								<ul class="dropdown">
+									<li><a href="./womenFashion/">Women Fashion</a></li>
+									<li><a href="./menFashion/">Men Fashion</a></li>
+									<li><a href="./kidToy/">Kids Toy</a></li>
+									<li><a href="./watch/">Watch</a></li>
+									<li><a href="./cosmetics/">Cosmetic</a></li>
+									<li><a href="./menShoe/">Men Shoes</a></li>
+									<li><a href="./womenShoe/">Women Shoes</a></li>
+									<li><a href="./houseware/">Houseware</a></li>
+									<li><a href="./phone/">Phone</a></li>
+									<li><a href="./tivi/">Tivi</a></li>
+								</ul>
+							</li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-lg-3">
+					<div class="header__right">
+						<div class="header__right__auth">
+							<a href="javaScript:void(0)" class="text-danger"
+								onclick="sessionStorage.removeItem('USER');window.location=`.`">Sign out</a>
+						</div>
+						<ul class="header__right__widget">
+							
+
+							<li onsubmit="return false"><a href="#" onclick="window.location='../shopCart.html'">
+								<span class="icon_bag_alt"></span>
+								<div class="tip" id="Th_Gio_hang">0</div>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="canvas__open">
+				<i class="fa fa-bars"></i>
+			</div>
+		</div>
+	</header>
+	<div class="user-profile">
+		<nav class="side-bar">
+			<div class="basic-info">
+				<div class="avatar">
+					<img src="https://htmediagroup.vn/wp-content/uploads/2021/07/anh-profile-bac-si-1.jpg" alt="" />
+				</div>
+				<p id="username">phuctran1203</p>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li class="my-accout active">Tài khoản của tôi</li>
+					<li class="cart ">Đơn mua</li>
+					<li class="notification">Thông báo</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="main-edit">
+			<div class="my-account">
+				<header>
+					<div>
+						<p>Hồ sơ của tôi</p>
+						<p>Quản lí thông tin hồ sơ để bảo mật tài khoản</p>
+					</div>
+				</header>
+				<hr />
+				<div class="main-info">
+					<div>
+						<div class="login-name">
+							<p class="label-left">Tên đăng nhâp</p>
+							<p class="info-right" id="showUsername">phuctranhehe</p>
+						</div>
+						<div class="showing-name">
+							<p class="label-left">Tên</p>
+
+							<p class="info-right" id="showName">phuctranhehe</p>
+						</div>
+						<div class="email">
+							<p class="label-left">Email</p>
+							<p class="info-right">demo123@gmail.com</p>
+							<a href="">Thay đổi</a>
+						</div>
+						<div class="phone">
+							<p class="label-left">Số điện thoại</p>
+							<p class="info-right">0123456789</p>
+							<a href="">Thay đổi</a>
+						</div>
+						<div class="sex">
+							<p class="label-left">giới tính</p>
+							<div class="info-right">
+								<input type="radio" id="male" name="radio" value="male" checked="true" />
+								<label for="male">Nam</label><br />
+								<input type="radio" id="female" name="radio" value="female" />
+								<label for="female">Nữ</label><br />
+								<input type="radio" id="other" name="radio" value="other" />
+								<label for="other">Khác</label>
+							</div>
+						</div>
+						<div class="birth">
+							<p class="label-left">Ngày sinh</p>
+							<div class="info-right">
+								<select id="day" name="day">
+									<option value="">Ngày</option>
+								</select>
+
+								<select id="month" name="month">
+									<option value="">Tháng</option>
+								</select>
+
+								<select id="year" name="year">
+									<option value="">Năm</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="choose-avatar">
+						<div class="avatar">
+							<img src="https://htmediagroup.vn/wp-content/uploads/2021/07/anh-profile-bac-si-1.jpg"
+								alt="" />
+						</div>
+						<button id="select-avatar">Đổi ảnh đại diện</button>
+					</div>
+				</div>
+				<button id="save-info">Lưu</button>
+			</div>
+
+			<div class="don-mua active">
+				<header>
+					<div>
+						<p>Đơn mua</p>
+						<p>Các sản phẩm đã mua</p>
+					</div>
+				</header>
+				<hr />
+				<div class="main-don-mua">
+					<!-- js fill san pham vao day -->
+				</div>
+			</div>
+
+			<div class="thong-bao">
+				<header>
+					<div>
+						<p>Thông báo</p>
+					</div>
+				</header>
+				<hr />
+				<div class="main-thong-bao">
+					<section class="page-contain" id="coupon">
+						<!-- <a href="#" class="data-card">
+						  <h3>270</h3>
+						  <h4>Care Facilities</h4>
+						  <p>Etiam porta sem malesuada.</p>
+						  
+						</a> -->
+						
+						
+					  </section>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.magnific-popup.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/mixitup.min.js"></script>
+	<script src="./js/jquery.countdown.min.js"></script>
+	<script src="./js/jquery.slicknav.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/jquery.nicescroll.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/api.js"></script>
+	<script src="./js/user_profile.js"></script>
+	<script>
+		if (sessionStorage.getItem("carts") != undefined) {
+            carts = JSON.parse(sessionStorage.getItem("carts"))
+        }
+        let Th_Gio_hang = document.getElementById("Th_Gio_hang");
+        let Th_Gio_hangmini = document.getElementById("Th_Gio_hangmini");
+        Th_Gio_hang.innerHTML = `${carts.length}`;
+        Th_Gio_hangmini.innerHTML = `${carts.length}`;
+	</script>
+</body>
+
+</html>

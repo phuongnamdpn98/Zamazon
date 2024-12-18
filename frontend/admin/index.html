@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login ADMIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("https://e1.pxfuel.com/desktop-wallpaper/754/1015/desktop-wallpaper-40-admin-creative-admin-backgrounds-full-admin.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .login {
+            width: 550px;
+            background-color: rgb(2, 2, 2, 0.9);
+            box-shadow: 0 0 2px white;
+            border-radius: 30px;
+
+            >h1 {
+                color: white;
+                margin: 20px;
+            }
+
+            .button {
+                position: relative;
+                left: 27%;
+                width: 210px;
+                margin: 20px;
+                border-bottom: 1px solid white;
+                margin-bottom: 30px;
+            }
+        }
+
+        .button>i {
+            position: absolute;
+            right: 0px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .login_button {
+            background: transparent;
+            border: 0;
+            outline: 0;
+            color: whitesmoke;
+        }
+
+        .button_submit {
+            /* background: transparent; */
+            border: 1px solid rgb(226, 223, 223);
+            width: 150px;
+            color: whitesmoke;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            box-shadow: 0 0 3px whitesmoke;
+            transition: 0.3s ease;
+            font-weight: bolder;
+            font-size: 14px;
+        }
+
+        .cc {
+            position: absolute;
+            right: -300px;
+            top: 10px;
+            transition: all 500ms ease-out;
+        }
+
+        .active_alert {
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <form action="" class="login">
+            <h1>Login</h1>
+            <div class="button">
+                <i class="fas fa-user" style="color: whitesmoke"></i>
+                <input class="login_button" type="text" value="" placeholder="Username" id="input-username" />
+            </div>
+            <div class="button">
+                <i class="fas fa-key" style="color: whitesmoke"></i>
+                <input class="login_button" type="password" value="" placeholder="Password" id="input-password" />
+            </div>
+            <button class="button_submit btn btn-secondary" id="btnLogin" onclick="dang_nhap()" type="button" value="">
+                Login
+            </button>
+        </form>
+
+        <div class="alert alert-success cc" id="alert" role="alert">
+            Đăng nhập thành công !!!
+        </div>
+    </div>
+    <script src="./js/api.js"></script>
+    <script src="./js/libs.js"></script>
+    
+</body>
+
+</html>
